@@ -1,24 +1,72 @@
-<!DOCTYPE html>
-<html lang="en">
+<<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vulTenserflow</title>
+    <title>VulTenserflow - CVE Vulnerabilities</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         h1 { color: #2c3e50; }
-        p { line-height: 1.6; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f4f4f4; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        tr:hover { background-color: #f1f1f1; }
     </style>
 </head>
 <body>
-    <h1>Welcome to vulTenserflow</h1>
-    <p>
-        This site is dedicated to analyzing and presenting vulnerabilities in machine learning systems.
-        Here, you can download vulnerability reports and learn more about our research.
-    </p>
-    <p>
-        Download the vulnerability report here:
-        <a href="vulnerability_report.docx" download>Download the report</a>
-    </p>
+    <h1>Liste des Vulnérabilités CVE</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>CVE Numbers</th>
+                <th>CWE Name</th>
+                <th>Description</th>
+                <th>Impact</th>
+                <th>Solutions / Mitigations</th>
+                <th>Phase</th>
+                <th>MITRE ATT&CK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>CVE-2023-27579</td>
+                <td>CWE-697: Incorrect Comparison</td>
+                <td>Le produit compare incorrectement deux entités dans un contexte pertinent pour la sécurité, ce qui peut conduire à des faiblesses.</td>
+                <td>- Authentification incorrecte <br>- Autorisation incorrecte <br>- Fuite d'informations</td>
+                <td>Utiliser des comparaisons complètes, validation appropriée, tests approfondis.</td>
+                <td>Implementation</td>
+                <td>T1078: Valid Accounts</td>
+            </tr>
+            <tr>
+                <td>CVE-2023-25801</td>
+                <td>CWE-415: Double Free</td>
+                <td>Le produit appelle free() deux fois sur la même adresse mémoire, ce qui peut entraîner des modifications des emplacements mémoire inattendus.</td>
+                <td>Modifier la mémoire ; Exécuter des codes ou commandes non autorisés</td>
+                <td>S'assurer que chaque allocation est libérée une seule fois, mettre le pointeur à NULL après libération.</td>
+                <td>Implementation</td>
+                <td>T1499: Resource Consumption</td>
+            </tr>
+            <tr>
+                <td>CVE-2023-25676</td>
+                <td>CWE-476: NULL Pointer Dereference</td>
+                <td>Le produit déréférence un pointeur qu'il s'attend à être valide mais qui est NULL. Cela peut entraîner des plantages ou des comportements inattendus.</td>
+                <td>- DoS: Crash, Exit, or Restart</td>
+                <td>- Vérifier tous les pointeurs pour NULL avant utilisation.</td>
+                <td>Implementation</td>
+                <td>T1078: Valid Accounts</td>
+            </tr>
+            <tr>
+                <td>CVE-2023-25675</td>
+                <td>CWE-697: Incorrect Comparison</td>
+                <td>Le produit compare deux entités dans un contexte pertinent pour la sécurité, mais la comparaison est incorrecte, ce qui peut entraîner des faiblesses.</td>
+                <td>Impact Technique: Varie selon le contexte</td>
+                <td>S'assurer que tous les facteurs pertinents sont inclus dans les comparaisons.</td>
+                <td>Implementation</td>
+                <td>T1211: Exploitation for Defense Evasion</td>
+            </tr>
+            <!-- Ajoute d'autres entrées ici -->
+        </tbody>
+    </table>
 </body>
 </html>
