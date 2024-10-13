@@ -1,20 +1,48 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VulTenserflow - CVE Vulnerabilities</title>
+    <title>VulTenserflow - CVE Vulnerabilities & Bugs</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #2c3e50; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 8px; }
-        th { background-color: #f4f4f4; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        tr:hover { background-color: #f1f1f1; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 20px;
+        }
+        table {
+            width: 90%;
+            border-collapse: collapse;
+            margin: 25px auto;
+            font-size: 1em;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #009879;
+            color: white;
+        }
+        tr:nth-of-type(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Premier tableau : Liste des Vulnérabilités CVE -->
     <h1>Liste des Vulnérabilités CVE</h1>
     <table>
         <thead>
@@ -47,111 +75,49 @@
                 <td>Implementation</td>
                 <td>T1499: Resource Consumption</td>
             </tr>
+            <!-- Ajoute d'autres entrées ici -->
+        </tbody>
+    </table>
+
+    <!-- Deuxième tableau : Liste des Bugs -->
+    <h1>List of Bugs</h1>
+    <table>
+        <thead>
             <tr>
-                <td>CVE-2023-25676</td>
-                <td>CWE-476: NULL Pointer Dereference</td>
-                <td>Le produit déréférence un pointeur qu'il s'attend à être valide mais qui est NULL. Cela peut entraîner des plantages ou des comportements inattendus.</td>
-                <td>- DoS: Crash, Exit, or Restart</td>
-                <td>- Vérifier tous les pointeurs pour NULL avant utilisation.</td>
-                <td>Implementation</td>
-                <td>T1078: Valid Accounts</td>
+                <th>Bug ID</th>
+                <th>URL</th>
+                <th>Source</th>
+                <th>Python Version</th>
+                <th>ML Framework</th>
+                <th>Violated Property</th>
+                <th>Bug Type</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td><a href="https://github.com/yourrepo">GitHub</a></td>
+                <td>GitHub</td>
+                <td>3.6</td>
+                <td>TensorFlow</td>
+                <td>Correctness</td>
+                <td>Wrong loss function calculation</td>
+                <td>Details about the wrong loss function</td>
             </tr>
             <tr>
-                <td>CVE-2023-25675</td>
-                <td>CWE-697: Incorrect Comparison</td>
-                <td>Le produit compare deux entités dans un contexte pertinent pour la sécurité, mais la comparaison est incorrecte, ce qui peut entraîner des faiblesses.</td>
-                <td>Impact Technique: Varie selon le contexte</td>
-                <td>S'assurer que tous les facteurs pertinents sont inclus dans les comparaisons.</td>
-                <td>Implementation</td>
-                <td>T1211: Exploitation for Defense Evasion</td>
+                <td>002</td>
+                <td><a href="https://github.com/yourrepo">GitHub</a></td>
+                <td>GitHub</td>
+                <td>3.6</td>
+                <td>TensorFlow</td>
+                <td>Correctness</td>
+                <td>Suboptimal learning rate</td>
+                <td>Details about learning rate optimization</td>
             </tr>
             <!-- Ajoute d'autres entrées ici -->
         </tbody>
     </table>
+
 </body>
 </html>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Projet</title>
-    <style>
-        /* Style pour le tableau */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-        }
-        .container {
-            width: 90%;
-            margin: auto;
-            padding-top: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-size: 1em;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-        }
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-        }
-        th {
-            background-color: #009879;
-            color: white;
-        }
-        tr:nth-of-type(even) {
-            background-color: #f3f3f3;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>List of Bugs</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Bug ID</th>
-                    <th>URL</th>
-                    <th>Source</th>
-                    <th>Python Version</th>
-                    <th>ML Framework</th>
-                    <th>Violated Property</th>
-                    <th>Bug Type</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>001</td>
-                    <td><a href="https://github.com/yourrepo">GitHub</a></td>
-                    <td>GitHub</td>
-                    <td>3.6</td>
-                    <td>TensorFlow</td>
-                    <td>Correctness</td>
-                    <td>Wrong loss function calculation</td>
-                    <td>Details about the wrong loss function</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td><a href="https://github.com/yourrepo">GitHub</a></td>
-                    <td>GitHub</td>
-                    <td>3.6</td>
-                    <td>TensorFlow</td>
-                    <td>Correctness</td>
-                    <td>Suboptimal learning rate</td>
-                    <td>Details about learning rate optimization</td>
-                </tr>
-                <!-- Ajoute plus de lignes ici -->
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
-
