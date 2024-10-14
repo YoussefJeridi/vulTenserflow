@@ -42,10 +42,17 @@
         <div class="navbar-menu-wrapper d-flex align-items-top" bis_skin_checked="1"> 
           <ul class="navbar-nav">
             <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
-              <h1 class="welcome-text">Defect4ML
+              <h1 class="welcome-text">vulTenserflow
                 <!-- <span class="text-black fw-bold">John Doe</span> -->
               </h1>
-              <h3 class="welcome-sub-text">Benchmark of Bugs in ML-based systems</h3>
+              <h3 class="welcome-sub-text">"Benchmark of Bugs in ML-based systems focused on TensorFlow security issues."
+
+
+
+
+
+
+</h3>
             </li>
           </ul>
           
@@ -109,6 +116,13 @@
   
             <li class="nav-item">
               <a class="nav-link" href="/about">
+                <i class="menu-icon mdi mdi-information-variant"></i>
+                <span class="menu-title">About</span>
+              </a>
+            </li>
+
+               <li class="nav-item">
+              <a class="nav-link" href="/Cybersecurity_Guide">
                 <i class="menu-icon mdi mdi-information-variant"></i>
                 <span class="menu-title">About</span>
               </a>
@@ -264,6 +278,50 @@
                                   
                                 </select> -->
                               </th>
+                                </th>
+<th>ML Framework
+  <!-- <select>
+    <option>ML Framework</option>
+    <option value="tensorflow">tensorflow</option>
+    <option value="keras">keras</option>
+    <option value="Keras">Keras</option>
+  </select> -->
+</th>
+
+<th>Phase of Pipeline
+  <!-- <select>
+    <option>Phase of Pipeline</option>
+    <option value="data_preprocessing">Data Preprocessing</option>
+    <option value="model_training">Model Training</option>
+    <option value="model_evaluation">Model Evaluation</option>
+    <option value="deployment">Deployment</option>
+  </select> -->
+</th>
+
+<th>CVE Number
+  <!-- <input type="text" placeholder="Enter CVE number"> -->
+</th>
+
+<th>CWE Name
+  <!-- <select>
+    <option>CWE Name</option>
+    <option value="CWE-89">SQL Injection (CWE-89)</option>
+    <option value="CWE-79">Cross-Site Scripting (CWE-79)</option>
+    <option value="CWE-119">Buffer Overflow (CWE-119)</option>
+    <!-- Add more CWE names as needed -->
+  </select> -->
+</th>
+
+<th>MITRE ATT&CK
+  <!-- <select>
+    <option>MITRE ATT&CK</option>
+    <option value="T1071">Application Layer Protocol (T1071)</option>
+    <option value="T1134">Access Token Manipulation (T1134)</option>
+    <option value="T1486">Data Encrypted for Impact (T1486)</option>
+    <!-- Add more ATT&CK techniques as needed -->
+  </select> -->
+</th>
+
                               <th>Description
                                 <!-- <select>
                                   <option>Bug Type</option>
@@ -344,7 +402,7 @@
                               </td>
                               <td>001</td>
                               <td>
-                                <a href="https://github.com/tensorflow/models/commit/d816971">
+                                <a href="https://github.com/tensorflow/tensorflow/commit/34f8368c535253f5c9cb3a303297743b62442aaa">
                                   <i class="mdi mdi-link-variant" style="color:#1F3BB3;font-size: 20px;"></i>
                                 </a>
                               </td>
@@ -359,9 +417,14 @@
                               <td colspan="9">
                                 <div style="overflow-x:scroll;" bis_skin_checked="1">
                                 <p>
-                                  <strong>Bug root cause </strong>: Wrong loss function calculation <br>
+                                  <strong>Bug root cause </strong>: Incorrect Comparison <br>
                                   <strong>Bug symptom </strong>: Incorrect functionality <br>
-                                  <strong>Bug description </strong>: Because of using manually implemented cross-entropy loss, training loss shows nan value after a number of training iterations. So, they changed it to built-in softmax_cross_entropy_with_logits. <br>
+                                  <strong>Bug description </strong>: The product incorrectly 
+                                                 Compares two entities
+                                       in a security-relevant
+                                      context, potentially 
+                                       leading to weaknesses
+                                       <br>
                                 </p>
                               </div>
                               </td>
