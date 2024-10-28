@@ -36,6 +36,8 @@
                                     <th>Bug Type</th>
                                     <th>MITRE ATT&CK</th>
                                     <th>Description</th>
+                                    <th>solution/mitigations</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -62,6 +64,7 @@
                                     <td>CWE-697: Incorrect Comparison</td> <!-- Bug Type shown as CWE Name -->
                                     <td>T1078: Valid Accounts</td>
                                     <td> **-The product incorrectly compares two entities in a security-relevant context, potentially leading to weaknesses.</td>
+                                    <td> Use complete comparisons, proper validation, thorough testing </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -92,6 +95,7 @@
                                     <td>**-The product calls free(),  twice on the same memory address, potentially leading
                                      to modification of unexpected memory locations
                                      </td>
+                                    <td> Ensure each allocation is freed only once, set pointer to NULL after freeing, use static analysis tools</td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -124,6 +128,8 @@
                                     <td>T1078: Valid Accounts</td>
                                     <td> **- The product dereferences a pointer that it expects to be valid but is NULL. This can lead to crashes or unintended behaviors
                                      </td>
+                                    <td>  - Check all pointers for NULL before use<br>- Use a programming language that prevents NULL dereferences<br>- Verify function return values before using them<br>- Initialize variables properly </td>
+
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -156,6 +162,7 @@
                                     <td></td> <!-- Empty cell for spacing -->
                                     <td> **-The product compares two entities in a security-relevant context, but the comparison is incorrect, which may lead to resultant weaknesses.
                                      </td>
+                                    <td> Ensure all relevant factors are included in comparisons • Use secure comparison functions • Validate all input data before comparison • Conduct thorough code reviews to </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -182,7 +189,7 @@
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
                                     <td>Implementation <br> Requirements Architecture and Design </td>
-                                    <td> Availability: DoS: Crash, Exit, or Restart. Integrity: Execute Unauthorized Code or Commands; Read Memory; Modify Memory. Confidentiality: Read Memory; Modify Memory.
+                                    <td> -Availability: DoS: Crash, Exit, or Restart. Integrity: Execute Unauthorized Code or Commands; Read Memory; Modify Memory. Confidentiality: Read Memory; Modify Memory.
                                                     </td>
                                     <td>CVE-2023-25674</td>
                                     <td> CWE-476: Null pointer defference </td> <!-- Bug Type shown as CWE Name -->
@@ -190,6 +197,8 @@
                                     <td></td> <!-- Empty cell for spacing -->
                                     <td> **-The product dereferences a pointer that it expects to be valid but is NULL.
                                      </td>
+                                    <td> implementation: Check all pointers for NULL before dereferencing them. Requirements: Select a programming language that is not susceptible to these issues.
+                                        Implementation: Check the results of all functions that return a value and verify that the value is non-null before acting upon it. </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -214,7 +223,45 @@
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
                                     <td>Implementation <br> Architecture and Design Operation Build and Compilation </td>
-                                    <td> Availability: Buffer overflows can cause crashes and excessive resource consumption.
+                                    <td> -Availability: Buffer overflows can cause crashes and excessive resource consumption.
+                                        Integrity: Can lead to arbitrary code execution or memory modification.
+                                        Confidentiality: Risk of unauthorized memory access.
+                                                        Access 
+                                                    </td>
+                                    <td>CVE-2023-25668</td>
+                                    <td> CWE-122: Heap-based Buffer Overflow</td> <!-- Bug Type shown as CWE Name -->
+                                    <td>Not specifically </td>
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td> **- A heap overflow condition is a buffer overflow where the buffer that can be overwritten is allocated in the heap portion of memory, generally using a routine such as malloc()
+                                     </td>
+                                    <td> Pre-design: Use languages or compilers with automatic bounds checking.
+                                        Architecture and Design: Employ abstraction libraries to reduce risky API usage.
+                                        Operation: Utilize buffer overflow detection tools and implement bounds checking.
+                                          Build and Compilation: Apply features like ASLR and PIE for memory randomization. </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>006</td>
+                                    <td>
+                                        
+
+                                    <a href="  https://github.com/tensorflow/tensorflow/commit/7b174a0f2e40ff3f3aa957aecddfd5aaae35eccb " target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Implementation <br> Architecture and Design Operation Build and Compilation </td>
+                                    <td> -Availability: Buffer overflows can cause crashes and excessive resource consumption.
                                         Integrity: Can lead to arbitrary code execution or memory modification.
                                         Confidentiality: Risk of unauthorized memory access.
                                                         Access 
@@ -228,7 +275,6 @@
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
-
 
 
 
