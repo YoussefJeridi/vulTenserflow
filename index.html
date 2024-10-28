@@ -71,11 +71,11 @@
                                     <td>
                                         <input type="checkbox" class="form-check-input check-down">
                                     </td>
-                                    <td>001</td>
+                                    <td>002</td>
                                     <td>
                                         
 
-                                    <a href="https://github.com/tensorflow/tensorflow/commit/34f8368c535253f5c9cb3a303297743b62442aaa" target="_blank" title="View Commit Details">
+                                    <a href="https://github.com/tensorflow/tensorflow/commit/ee50d1e00f81f62a4517453f721c634bbb478307" target="_blank" title="View Commit Details">
                                     Link
                                     </a>
                                         
@@ -85,11 +85,14 @@
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
                                     <td>Implementation</td>
-                                    <td> -Incorrect Authentication, -Incorrect authorization, -Information  leakage </td>
-                                    <td>CVE-2023-27579</td>
-                                    <td>CWE-697: Incorrect Comparison</td> <!-- Bug Type shown as CWE Name -->
-                                    <td>T1078: Valid Accounts</td>
-                                    <td>The product incorrectly compares two entities in a security-relevant context, potentially leading to weaknesses.</td>
+                                    <td> -Modify Memory; -Execute Unauthorized Code or Commands </td>
+                                    <td>CVE-2023-25801</td>
+                                    <td>CWE-415: Double Free</td> <!-- Bug Type shown as CWE Name -->
+                                    <td>T1499: Resource consumption</td>
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>The product calls free(),  twice on the same memory address, potentially leading
+                                     to modification of unexpected memory locations
+                                     </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
