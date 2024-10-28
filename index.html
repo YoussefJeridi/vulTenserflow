@@ -122,12 +122,12 @@
                                     <td>CVE-2023-25676</td>
                                     <td>CWE-476: NULL Pointer Dereference </td> <!-- Bug Type shown as CWE Name -->
                                     <td>T1078: Valid Accounts</td>
-                                    <td> **- Check all pointers for NULL before use<br>- Use a programming language that prevents NULL dereferences<br>- Verify function 
-                                        return values before using them<br>- Initialize variables properly
+                                    <td> **- The product dereferences a pointer that it expects to be valid but is NULL. This can lead to crashes or unintended behaviors
                                      </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
+                            
 
                              <tbody>
                                 <tr>
@@ -159,6 +159,82 @@
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
+
+                            
+
+
+                             <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>005</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/728113a3be690facad6ce436660a0bc1858017fa" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Implementation <br> Requirements Architecture and Design </td>
+                                    <td> Availability: DoS: Crash, Exit, or Restart. Integrity: Execute Unauthorized Code or Commands; Read Memory; Modify Memory. Confidentiality: Read Memory; Modify Memory.
+                                                    </td>
+                                    <td>CVE-2023-25674</td>
+                                    <td> CWE-476: Null pointer defference </td> <!-- Bug Type shown as CWE Name -->
+                                    <td>Not specifically </td>
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td> **-The product dereferences a pointer that it expects to be valid but is NULL.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>006</td>
+                                    <td>
+                                        
+
+                                    <a href="  https://github.com/tensorflow/tensorflow/commit/7b174a0f2e40ff3f3aa957aecddfd5aaae35eccb " target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Implementation <br> Architecture and Design Operation Build and Compilation </td>
+                                    <td> Availability: Buffer overflows can cause crashes and excessive resource consumption.
+                                        Integrity: Can lead to arbitrary code execution or memory modification.
+                                        Confidentiality: Risk of unauthorized memory access.
+                                                        Access 
+                                                    </td>
+                                    <td>CVE-2023-25668</td>
+                                    <td> CWE-122: Heap-based Buffer Overflow</td> <!-- Bug Type shown as CWE Name -->
+                                    <td>Not specifically </td>
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td> **- A heap overflow condition is a buffer overflow where the buffer that can be overwritten is allocated in the heap portion of memory, generally using a routine such as malloc()
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+
+
+
+                            
+
+                            
 
                             
 
