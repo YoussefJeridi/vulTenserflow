@@ -247,11 +247,11 @@
                                     <td>
                                         <input type="checkbox" class="form-check-input check-down">
                                     </td>
-                                    <td>006</td>
+                                    <td>007</td>
                                     <td>
                                         
 
-                                    <a href="  https://github.com/tensorflow/tensorflow/commit/7b174a0f2e40ff3f3aa957aecddfd5aaae35eccb " target="_blank" title="View Commit Details">
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/8dc723fcdd1a6127d6c970bd2ecb18b019a1a58d  " target="_blank" title="View Commit Details">
                                     Link
                                     </a>
                                         
@@ -260,21 +260,110 @@
                                     <td>3.6</td>
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
-                                    <td>Implementation <br> Architecture and Design Operation Build and Compilation </td>
-                                    <td> -Availability: Buffer overflows can cause crashes and excessive resource consumption.
-                                        Integrity: Can lead to arbitrary code execution or memory modification.
-                                        Confidentiality: Risk of unauthorized memory access.
-                                                        Access 
+                                    <td> Requirements Implementation - Architecture and Design</td>
+                                    <td> **-- Availability: DoS (Crash, Exit, Restart); Resource Consumption (Memory); Instability <br> - Integrity: Modify Memory <br>
+                                        - Confidentiality: Execute Unauthorized Code; Bypass Protection Mechanism <br> - Other: Alter Execution Logic; DoS (CPU)
                                                     </td>
-                                    <td>CVE-2023-25668</td>
-                                    <td> CWE-122: Heap-based Buffer Overflow</td> <!-- Bug Type shown as CWE Name -->
-                                    <td>Not specifically </td>
+                                    <td>CWE-190: Integer Overflow or Wraparound</td>
+                                    <td> CWE-122: Heap-based Buffer Overflow/td> <!-- Bug Type shown as CWE Name -->
+                                    <td>
+
+                                     Not directly mapped
+                                       </td>
+                                    
                                     <td></td> <!-- Empty cell for spacing -->
-                                    <td> **- A heap overflow condition is a buffer overflow where the buffer that can be overwritten is allocated in the heap portion of memory, generally using a routine such as malloc()
+                                    <td>** The product performs a calculation that can produce an integer overflow or wraparound when the logic 
+                                        assumes the resulting value will always be larger than the original value. This occurs when an integer value is incremented to a value that is too large to store in the associated representation
+                                     </td>
+                                      <td>** Requirements: Ensure strict protocol definitions and conformance. <br> - Language Selection: Use languages or 
+                                          compilers with automatic bounds checking. <br> - Architecture and Design: Utilize vetted libraries or frameworks for safe integer handling.
                                      </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>008</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/ddaac2bdd099bec5d7923dea45276a7558217e5b " target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Requirements  </td>
+                                    <td> **Strategy: Language Selection <br> Use a language that prevents buffer overflows or provides constructs to avoid them. <br> Phase: Architecture and Design
+                                                    </td>
+                                    <td> CVE-2023-25664:  </td>
+                                    <td> CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')   <td> <!-- Bug Type shown as CWE Name -->
+                                    <td>
+
+                                     Not directly mapped
+                                       </td>
+                                    
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>** A buffer overflow condition occurs when data is copied to a buffer without ensuring that the buffer can hold it, leading to potential overwriting of 
+                                        adjacent memory. This can result in various issues such as crashes or unauthorized code execution.
+                                     </td>
+                                      <td>** Integrity: Modify Memory; Execute Unauthorized Code or Commands <br> Availability: Modify Memory; DoS: Crash, Exit, or Restart; DoS: Resource Consumption (CPU)
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+                               <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>009</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/948fe6369a5711d4b4568ea9bbf6015c6dfb77e2" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Attack Lifecycle Phase: Execution, where malformed input data is processed, leading to a denial of service.
+                                                </td>
+                                    <td> **Denial of Service (DoS). By exploiting this vulnerability, an attacker can cause TensorFlow models to crash, disrupting availability and potentially affecting any services depending on these models.
+                                        This issue is particularly concerning for cloud-hosted MLaaS environments.
+                                                    </td>
+                                    <td> CVE-2023-25661  </td>
+                                    <td> Cwe-20   Improper Input validation
+                                        <td> <!-- Bug Type shown as CWE Name -->
+                                    <td>
+
+                                     Technique: T1499 - Endpoint Denial of Service
+                                       </td>
+                                    
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>** A vulnerability in TensorFlow’s Convolution3DTranspose layer allows a denial of service (DoS) attack to be triggered when 
+                                        the model encounters a malicious input with a zero dimension, causing a "Check Failed" error and a subsequent crash 
+                                     </td>
+                                      <td>** Patched Versions: Update to TensorFlow versions 2.11.1 or 2.12.0, where this issue is resolved.
+                                       Validate input dimensions before passing them to the model to prevent zero-dimensional inputs from causing crashes.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+
+                            
 
 
 
