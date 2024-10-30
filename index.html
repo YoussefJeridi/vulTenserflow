@@ -274,9 +274,9 @@
                                      Not directly mapped
                                        </td>
                                     
-                                    <td></td> <!-- Empty cell for spacing -->
                                     <td>** The product performs a calculation that can produce an integer overflow or wraparound when the logic 
-                                        assumes the resulting value will always be larger than the original value. This occurs when an integer value is incremented to a value that is too large to store in the associated representation
+                                        assumes the resulting value will always be larger than the original value. This occurs when an integer value is
+                                        incremented to a value that is too large to store in the associated representation
                                      </td>
                                       <td>** Requirements: Ensure strict protocol definitions and conformance. <br> - Language Selection: Use languages or 
                                           compilers with automatic bounds checking. <br> - Architecture and Design: Utilize vetted libraries or frameworks for safe integer handling.
@@ -307,13 +307,12 @@
                                     <td> **Strategy: Language Selection <br> Use a language that prevents buffer overflows or provides constructs to avoid them. <br> Phase: Architecture and Design
                                                     </td>
                                     <td> CVE-2023-25664:  </td>
-                                    <td> CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')   <td> <!-- Bug Type shown as CWE Name -->
+                                    <td> CWE-120: Buffer Copy without Checking Size of Input ('Classic Buffer Overflow')   </td> <!-- Bug Type shown as CWE Name -->
                                     <td>
 
                                      Not directly mapped
                                        </td>
-                                    
-                                    <td></td> <!-- Empty cell for spacing -->
+                            
                                     <td>** A buffer overflow condition occurs when data is copied to a buffer without ensuring that the buffer can hold it, leading to potential overwriting of 
                                         adjacent memory. This can result in various issues such as crashes or unauthorized code execution.
                                      </td>
@@ -348,13 +347,13 @@
                                                     </td>
                                     <td> CVE-2023-25661  </td>
                                     <td> Cwe-20   Improper Input validation
-                                        <td> <!-- Bug Type shown as CWE Name -->
+                                        </td> <!-- Bug Type shown as CWE Name -->
                                     <td>
 
                                      Technique: T1499 - Endpoint Denial of Service
                                        </td>
                                     
-                                    <td></td> <!-- Empty cell for spacing -->
+                                    
                                     <td>** A vulnerability in TensorFlow’s Convolution3DTranspose layer allows a denial of service (DoS) attack to be triggered when 
                                         the model encounters a malicious input with a zero dimension, causing a "Check Failed" error and a subsequent crash 
                                      </td>
@@ -390,15 +389,13 @@
                                                     </td>
                                     <td> CVE-2022-41902  </td>
                                     <td> CWE-121: Stack-based Buffer Overflow
-                                        <td> <!-- Bug Type shown as CWE Name -->
+                                        </td> <!-- Bug Type shown as CWE Name -->
                                     <td>
-
                                      T1068: Exploitation for Privilege Escalation
                                        </td>
-                                    
                                     <td>** This vulnerability involves writing data past the end of the intended buffer, which can lead to arbitrary code execution, system crashes, or corruption of data
                                      </td>
-                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.
+                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.</td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -428,7 +425,7 @@
                                                     </td>
                                     <td> CVE-2022-41902  </td>
                                     <td> CWE-121: Stack-based Buffer Overflow
-                                        <td> <!-- Bug Type shown as CWE Name -->
+                                        </td> <!-- Bug Type shown as CWE Name -->
                                     <td>
 
                                      T1068: Exploitation for Privilege Escalation
@@ -436,7 +433,7 @@
                                     
                                     <td>** This vulnerability involves writing data past the end of the intended buffer, which can lead to arbitrary code execution, system crashes, or corruption of data
                                      </td>
-                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.
+                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.</td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -467,23 +464,15 @@
                                     <td> CVE-2022-36004 </td>
                                     <td> CWE-617: Reachable Assertion  </td>
                                     
-                                    <td> <!-- Bug Type shown as CWE Name -->
-                                    <td>
-
-                                     
-                                       </td>
-                                    
                                     <td>** The product receives input or data but does not validate or incorrectly validates the input, leading to unsafe or incorrect processing.
                                      </td>
-                                      <td>**
-
-                                              - Architecture and Design: Use language-theoretic security techniques to define acceptable inputs with formal "recognizers" 
+                                      <td>** -Architecture and Design: Use language-theoretic security techniques to define acceptable inputs with formal "recognizers" 
                                               - Architecture and Design: Utilize input validation frameworks such as OWASP ESAPI 
                                               - Implementation: Assume all input is malicious, use whitelisting 
                                               - Implementation: Validate input after combining data from multiple sources 
                                               - Implementation: Validate input when crossing language boundaries 
                                               - Implementation: Convert input types directly and validate after conversion 
-                                              - Implementation: Ensure proper decoding and canonicalization of inputs
+                                              - Implementation: Ensure proper decoding and canonicalization of inputs </td>
 
                                     </tr>
                                 <!-- Add more rows as needed -->
@@ -514,7 +503,7 @@
                                                     </td>
                                     <td> CVE-2022-41901
                                                     </td>
-                                    <td>  CWE-20: Improper Input Validation
+                                    <td>  CWE-20: Improper Input Validation 
                                         </td> <!-- Bug Type shown as CWE Name -->
                                     <td>T1068 Privilege Escalation
                                         
@@ -682,9 +671,8 @@
                                     <td> CWE-704: Incorrect Type Conversion or Cast
                                         </td> <!-- Bug Type shown as CWE Name -->
                                     <td> Technique ID: T1203 (Exploitation for Client Execution
-                                        </td>
-                                    
-                                    <td></td> <!-- Empty cell for spacing -->
+                                        </td>                                  
+                                
                                     <td>** The product does not correctly convert an object, resource, or structure from one type to a different type.
                                      </td>
                                       <td>** - Use explicit type conversion and validation checks.
@@ -769,7 +757,6 @@
  
                                         </td>
                                     
-                                    <td></td> <!-- Empty cell for spacing -->
                                     <td>** The code contains a control flow path that doesn't align with the intended algorithm, resulting in incorrect execution behavior.
                                      </td>
                                       <td>** . Always use braces for control structures to clarify the intended block.
@@ -812,7 +799,6 @@
                                  
                                        </td>
                                     
-                                    <td></td> <!-- Empty cell for spacing -->
                                     <td>** Division by zero due to lack of denominator validation, causing a crash or unexpected behavior during execution.
                                      </td>
                                       <td>** Always validate input values before performing division. Implement exception handling to prevent crashes in case of division by zero.
