@@ -264,8 +264,11 @@
                                     <td> **-- Availability: DoS (Crash, Exit, Restart); Resource Consumption (Memory); Instability <br> - Integrity: Modify Memory <br>
                                         - Confidentiality: Execute Unauthorized Code; Bypass Protection Mechanism <br> - Other: Alter Execution Logic; DoS (CPU)
                                                     </td>
-                                    <td>CWE-190: Integer Overflow or Wraparound</td>
-                                    <td> CWE-122: Heap-based Buffer Overflow/td> <!-- Bug Type shown as CWE Name -->
+                                    <td>   CVE-2023-
+                                              25667
+                                              </td>
+                                    
+                                    <td> CWE-190: Integer Overflow or Wraparound</td> <!-- Bug Type shown as CWE Name -->
                                     <td>
 
                                      Not directly mapped
@@ -496,7 +499,7 @@
                                     <td>
                                         
 
-                                    <a href=" https://github.com/tensorflow/tensorflow/commit/a65411a1d69edfb16b25907ffb8f73556ce36bb7" target="_blank" title="View Commit Details">
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/f856d02e5322821aad155dad9b3acab1e9f5d693 " target="_blank" title="View Commit Details">
                                     Link
                                     </a>
                                         
@@ -505,21 +508,22 @@
                                     <td>3.6</td>
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
-                                    <td>Exploitation
+                                    <td>Architecture, Implementation
                                                 </td>
                                     <td> Critical – Potential for remote code execution and crashes
                                                     </td>
-                                    <td> CVE-2022-41902  </td>
-                                    <td> CWE-121: Stack-based Buffer Overflow
+                                    <td> CVE-2022-41901
+                                               CWE-20: Improper Input Validation
+                                                    </td>
+                                    <td> 
                                         <td> <!-- Bug Type shown as CWE Name -->
-                                    <td>
-
-                                     T1068: Exploitation for Privilege Escalation
+                                    <td>T1068 Privilege Escalation
+                                        
                                        </td>
                                     
-                                    <td>** This vulnerability involves writing data past the end of the intended buffer, which can lead to arbitrary code execution, system crashes, or corruption of data
+                                    <td>** This vulnerability occurs when input validation is insufficient, allowing attackers to insert harmful data. This can lead to system crashes, data corruption, or unauthorized code execution.
                                      </td>
-                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.
+                                      <td>** Implement robust input validation frameworks like OWASP ESAPI, validate both server- and client-side, and apply consistent data conversion.
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -534,7 +538,7 @@
                                     <td>
                                         
 
-                                    <a href=" https://github.com/tensorflow/tensorflow/commit/a65411a1d69edfb16b25907ffb8f73556ce36bb7" target="_blank" title="View Commit Details">
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/216525144ee7c910296f5b05d214ca1327c9ce48" target="_blank" title="View Commit Details">
                                     Link
                                     </a>
                                         
@@ -543,21 +547,25 @@
                                     <td>3.6</td>
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
                                     <td>Correctness</td>
-                                    <td>Exploitation
+                                    <td> Implementation
                                                 </td>
-                                    <td> Critical – Potential for remote code execution and crashes
+                                    <td> Availability: Potential for Denial of Service (DoS) due to resource exhaustion.
+                                         Confidentiality: Risk of data breaches if sensitive information is exposed.
                                                     </td>
-                                    <td> CVE-2022-41902  </td>
-                                    <td> CWE-121: Stack-based Buffer Overflow
+                                    <td>  CVE-2022-41900
+                                              </td>
+                                    <td> CWE-125: Out-of-bounds Read
+
                                         <td> <!-- Bug Type shown as CWE Name -->
                                     <td>
-
-                                     T1068: Exploitation for Privilege Escalation
+                                          T1202 - Indirect Command Execution:
+                                    
                                        </td>
                                     
-                                    <td>** This vulnerability involves writing data past the end of the intended buffer, which can lead to arbitrary code execution, system crashes, or corruption of data
+                                    <td>** The product reads data past the end, or before the beginning, of the intended buffer.
                                      </td>
-                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.
+                                      <td>** Implementation: Input validation; reject any input not conforming to specifications.
+                                         - Architecture and Design: Use languages with appropriate memory abstractions.  </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -571,7 +579,7 @@
                                     <td>
                                         
 
-                                    <a href=" https://github.com/tensorflow/tensorflow/commit/a65411a1d69edfb16b25907ffb8f73556ce36bb7" target="_blank" title="View Commit Details">
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/80ff197d03db2a70c6a111f97dcdacad1b0babfa" target="_blank" title="View Commit Details">
                                     Link
                                     </a>
                                         
@@ -579,25 +587,30 @@
                                     <td><label class="badge badge-dark">GitHub</label></td>
                                     <td>3.6</td>
                                     <td><label class="badge badge-warning">TensorFlow</label></td>
-                                    <td>Correctness</td>
-                                    <td>Exploitation
+                                    <td>CorDevelopment/Implementation </td>
+                                    <td> Availability: Potential for Denial of Service (DoS) due to resource exhaustion.
+                                       Confidentiality: Risk of data breaches if sensitive information is exposed.
                                                 </td>
-                                    <td> Critical – Potential for remote code execution and crashes
+                                    <td> CVE-2022-41899
                                                     </td>
-                                    <td> CVE-2022-41902  </td>
-                                    <td> CWE-121: Stack-based Buffer Overflow
-                                        <td> <!-- Bug Type shown as CWE Name -->
-                                    <td>
-
-                                     T1068: Exploitation for Privilege Escalation
+                                    <td> CWE-20: Improper Input Validation
                                        </td>
+                                    <td> 
+                                      TA0001: Initial Access
+                                      TA0002: Executio
+
+                                    </td>
                                     
-                                    <td>** This vulnerability involves writing data past the end of the intended buffer, which can lead to arbitrary code execution, system crashes, or corruption of data
+                    
+                                    <td>** The product receives input or data but does not validate or incorrectly validates that the input has the properties required to process the data safely and correctly.
                                      </td>
-                                      <td>** Apply security patches provided by the vendor, conduct rigorous input validation, use safe memory management practices, and perform code audits.
+                                      <td>** adopt a comprehensive approach by using language-theoretic security techniques 
+                                          and frameworks like OWASP ESAPI. Validate all input as potentially malicious on both server and client sides, ensuring 
+                                          proper decoding and consistent character encoding. This reinforces security and minimizes exploitation risks.
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
+                            
 
                              <tbody>
                                 <tr>
