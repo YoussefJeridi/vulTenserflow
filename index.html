@@ -513,17 +513,16 @@
                                     <td> Critical – Potential for remote code execution and crashes
                                                     </td>
                                     <td> CVE-2022-41901
-                                               CWE-20: Improper Input Validation
                                                     </td>
-                                    <td> 
-                                        <td> <!-- Bug Type shown as CWE Name -->
+                                    <td>  CWE-20: Improper Input Validation
+                                        </td> <!-- Bug Type shown as CWE Name -->
                                     <td>T1068 Privilege Escalation
                                         
                                        </td>
                                     
                                     <td>** This vulnerability occurs when input validation is insufficient, allowing attackers to insert harmful data. This can lead to system crashes, data corruption, or unauthorized code execution.
                                      </td>
-                                      <td>** Implement robust input validation frameworks like OWASP ESAPI, validate both server- and client-side, and apply consistent data conversion.
+                                      <td>** Implement robust input validation frameworks like OWASP ESAPI, validate both server- and client-side, and apply consistent data conversion. </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -556,7 +555,7 @@
                                               </td>
                                     <td> CWE-125: Out-of-bounds Read
 
-                                        <td> <!-- Bug Type shown as CWE Name -->
+                                        </td> <!-- Bug Type shown as CWE Name -->
                                     <td>
                                           T1202 - Indirect Command Execution:
                                     
@@ -597,7 +596,7 @@
                                        </td>
                                     <td> 
                                       TA0001: Initial Access
-                                      TA0002: Executio
+                                      TA0002: Execution
 
                                     </td>
                                     
@@ -606,7 +605,7 @@
                                      </td>
                                       <td>** adopt a comprehensive approach by using language-theoretic security techniques 
                                           and frameworks like OWASP ESAPI. Validate all input as potentially malicious on both server and client sides, ensuring 
-                                          proper decoding and consistent character encoding. This reinforces security and minimizes exploitation risks.
+                                          proper decoding and consistent character encoding. This reinforces security and minimizes exploitation risks.  </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
@@ -639,9 +638,7 @@
                                            </td>
                                     <td> CWE-1284: Improper Validation of Specified Quantity in Input </td>
 
-                                        <td> <!-- Bug Type shown as CWE Name -->
                                     <td>
-
                                           N/A
                                        </td>
                                     
@@ -651,11 +648,177 @@
                                             - Use an "accept known good" validation strategy.
                                             - Validate length, type, and range of acceptable values.
                                             - Consider business rules for context-specific validation.
-                                            - Avoid relying solely on denial lists for input validation.
+                                            - Avoid relying solely on denial lists for input validation.   </td>
                                     </tr>
                                 <!-- Add more rows as needed -->
                             </tbody>
 
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>017</td>
+                                    <td>
+                                        
+
+                                    <a href="https://github.com/tensorflow/tensorflow/commit/8310bf8dd188ff780e7fc53245058215a05bdbe5" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Implementation	
+                                                </td>
+                                    <td> ** Confidentiality: An attacker may exploit type confusion to access unintended resources or data.
+                                            Integrity: Incorrect conversions can lead to data corruption or erroneous calculations.
+                                                    </td>
+                                    <td> CVE-2022-41890 </td>
+                                    <td> CWE-704: Incorrect Type Conversion or Cast
+                                        </td> <!-- Bug Type shown as CWE Name -->
+                                    <td> Technique ID: T1203 (Exploitation for Client Execution
+                                        </td>
+                                    
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>** The product does not correctly convert an object, resource, or structure from one type to a different type.
+                                     </td>
+                                      <td>** - Use explicit type conversion and validation checks.
+                                             - Implement runtime type checks before performing conversions.
+                                             - Utilize static analysis tools to identify potential type conversion issues.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>018</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/c5b30379ba87cbe774b08ac50c1f6d36df4ebb7c " target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td>Implementation	
+                                                </td>
+                                    <td> **Denial of Service (DoS): Application crash or restart.
+                                         - Execute Unauthorized Code or Commands.
+                                              - Read or Modify Memory.
+                                                    </td>
+                                    <td> CVE-2022-41887 </td>
+                                    <td> CWE-131: Incorrect Calculation of Buffer Size
+                                        </td> <!-- Bug Type shown as CWE Name -->
+                                    <td>
+
+                                    TBC (To Be Confirmed)
+                                       </td>
+                                    
+                                    <td>** The software does not correctly calculate the size to be used when allocating a buffer, leading to potential buffer overflows.
+                                     </td>
+                                      <td>**  Allocate enough memory for the largest possible encoding when transforming input.
+                                              . Validate numeric input to ensure it is within expected ranges.
+                                              . Use safe functions that limit the number of bytes copied.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>019</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/2b56169c16e375c521a3bc8ea658811cc0793784" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td> Implementation
+                                                </td>
+                                    <td> **- Execution Flow Manipulation: Alters application behavior and execution logic.
+                                           - Unauthorized Access: May inadvertently grant access to restricted areas.
+                                           - Denial of Service (DoS): Can cause crashes or unintended DoS.
+                                                    </td>
+                                    <td> CVE-2022-41884 </td>
+                                    <td> CWE-670: Always-Incorrect Control Flow Implementation 
+                                        </td> <!-- Bug Type shown as CWE Name -->
+                                    <td> Execution Flow Manipulation (MITRE: T1574.010)
+ 
+                                        </td>
+                                    
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>** The code contains a control flow path that doesn't align with the intended algorithm, resulting in incorrect execution behavior.
+                                     </td>
+                                      <td>** . Always use braces for control structures to clarify the intended block.
+                                             . Conduct thorough testing, especially for critical control paths.
+                                             . Carefully review security-critical paths to avoid unintended behavior or control logic vulnerabilities.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
+
+                              <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>020</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/611d80db29dd7b0cfb755772c69d60ae5bca05f9" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td> Implementation
+                                                </td>
+                                    <td> **DoS: Crash, unexpected exit, restart
+                                                    </td>
+                                    <td> CVE-2022-35996   </td>
+                                    <td> CWE-369: Divide By Zero
+
+                                        </td> <!-- Bug Type shown as CWE Name -->
+                                    <td> Execution / Privilege Escalation
+
+                                 
+                                       </td>
+                                    
+                                    <td></td> <!-- Empty cell for spacing -->
+                                    <td>** Division by zero due to lack of denominator validation, causing a crash or unexpected behavior during execution.
+                                     </td>
+                                      <td>** Always validate input values before performing division. Implement exception handling to prevent crashes in case of division by zero.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
 
                             
 
