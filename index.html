@@ -809,6 +809,57 @@
                                 <!-- Add more rows as needed -->
                             </tbody>
 
+
+
+                            
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="form-check-input check-down">
+                                    </td>
+                                    <td>021</td>
+                                    <td>
+                                        
+
+                                    <a href=" https://github.com/tensorflow/tensorflow/commit/760322a71ac9033e122ef1f4b1c62813021e5938" target="_blank" title="View Commit Details">
+                                    Link
+                                    </a>
+                                        
+                                    </td>
+                                    <td><label class="badge badge-dark">GitHub</label></td>
+                                    <td>3.6</td>
+                                    <td><label class="badge badge-warning">TensorFlow</label></td>
+                                    <td>Correctness</td>
+                                    <td> **- Requirements: Language Selection
+                                      - Architecture and Design: Libraries or Frameworks
+                                      - Implementation: Memory management rules
+                                      - Operation: Environment Hardening
+                                                </td>
+                                    <td> **- Integrity: Modify memory, execute unauthorized code.
+                                          - Availability: Potential DoS, causing crashes or unexpected states.
+                                                    </td>
+                                    <td> CCVE-2023-25671 </td>
+                                    <td> CWE-787: Out-of-bounds Write
+
+                                        </td> <!-- Bug Type shown as CWE Name -->
+                                    <td> - T1203: Exploitation for Client Execution
+                                         - T1555: Credentials from Password Stores
+
+                                 
+                                       </td>
+                                    
+                                    <td>**This vulnerability occurs when a product writes data beyond the intended buffer limits, leading to memory corruption.
+                                     </td>
+                                      <td>** - Use a language with built-in memory management (e.g., Java, Perl).
+                                             - Utilize vetted libraries that mitigate buffer overflows.
+                                              - Implement automatic buffer overflow detection in compilers (e.g., StackGuard).
+                                            - Validate buffer sizes and truncate inputs to avoid overflow.
+                                     </td>
+                                    </tr>
+                                <!-- Add more rows as needed -->
+                            </tbody>
+
                             
 
 
